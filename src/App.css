@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+:root {
+  --text: #0a0a05;
+  --background: #fcfcf8;
+  --primary: #b6be57;
+  --secondary: #d2d88e;
+  --accent: #c8d166;
+}
+
+/* 1. Define the font-face */
+@font-face {
+  font-family: 'VFC Fantomen';
+  src: url('./assets/per.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 2. Map it to a Tailwind theme variable */
+@theme {
+  --font-fantomen: "VFC Fantomen", sans-serif;
+}
