@@ -1,31 +1,34 @@
 import { useEffect, useRef } from "react";
 
-export default function ChapterOne() {
+export default function ChapterTwo({ playTrack , stopTrack }) {
+
   const sectionRef = useRef(null);
-  const audioRef = useRef(null);
 
   useEffect(() => {
-    const section = sectionRef.current;
-    const audio = audioRef.current;
+    if (typeof playTrack !== "function") return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          audio.play().catch(() => {});
+          // entering Chapter 1
+          playTrack("/music/2.mp3");
         } else {
-          audio.pause();
-          audio.currentTime = 0; // reset (optional)
+          // leaving Chapter 1
+          stopTrack?.();
         }
       },
-      { threshold: 0.6 } // 60% visible
+      {
+        threshold: 0.3, // was 0.6
+      }
     );
 
-    if (section) observer.observe(section);
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
 
-    return () => {
-      if (section) observer.unobserve(section);
-    };
-  }, []);
+    return () => observer.disconnect();
+  }, [playTrack, stopTrack]);
+
 
   return (
     <section
@@ -33,11 +36,9 @@ export default function ChapterOne() {
       className="h-screen w-full bg-black flex items-center justify-center text-white text-center"
     >
       <h1 className="text-4xl md:text-6xl font-fantomen">
-        Chapter 2: Bastard king of nerul
+        Chapter 2: Stranger in the land of shadows
       </h1>
 
-      {/* 🔊 Audio */}
-      <audio ref={audioRef} src="/music/2.mp3" preload="auto" />
     </section>
   );
 }

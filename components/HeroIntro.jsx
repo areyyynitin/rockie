@@ -22,11 +22,11 @@ function Model() {
 }
 
 /* -------------------- Main Component -------------------- */
-export default function Hero3D() {
+export default function HeroIntro() {
   return (
     <div className="w-full h-screen relative bg-amber-600 overflow-hidden">
       {/* 3D Canvas */}
-      <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
+      <Canvas camera={{ position: [0, 0, 5], fov: 50 }} className="cursor-pointer">
         {/* Lighting (soft + premium) */}
         <ambientLight intensity={0.6} />
         <directionalLight position={[2, 2, 5]} intensity={1.2} />

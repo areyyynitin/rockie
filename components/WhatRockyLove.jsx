@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function PugLoveSection() {
+export default function WhatRockyLoves() {
   const sectionRef = useRef(null);
   const textRef = useRef(null);
   const img1Ref = useRef(null);

@@ -12,7 +12,6 @@ export default function OldMonk() {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          // ▶️ play with small fade-in
           audio.volume = 0;
           audio.play().catch(() => {});
 
@@ -44,9 +43,9 @@ export default function OldMonk() {
   return (
     <section
       ref={sectionRef}
-      className="h-screen w-full flex flex-col items-center justify-center gap-6"
+      className="h-screen w-full bg-[#d2d88e] flex flex-col items-center justify-center gap-6"
     >
-      <h2 className="text-5xl font-serif my-10">
+      <h2 className="text-5xl text-white font-fantomen my-10">
         Party toh banti hai
       </h2>
 

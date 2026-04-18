@@ -1,43 +1,58 @@
+"use client";
+
 import { useEffect, useRef } from "react";
 
-export default function ChapterOne() {
+export default function ChapterOne({ playTrack, stopTrack }) {
   const sectionRef = useRef(null);
-  const audioRef = useRef(null);
 
   useEffect(() => {
-    const section = sectionRef.current;
-    const audio = audioRef.current;
+    if (!sectionRef.current) return;
+
+    const el = sectionRef.current;
+
+    const triggerIfVisible = () => {
+      const rect = el.getBoundingClientRect();
+
+      const visibleEnough =
+        rect.top < window.innerHeight * 0.7 &&
+        rect.bottom > window.innerHeight * 0.3;
+
+      if (visibleEnough) {
+        playTrack("/music/1.mp3");
+      }
+    };
+
+    // FIX: run once immediately on mount
+    setTimeout(triggerIfVisible, 100);
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          audio.play().catch(() => {});
+          playTrack("/music/1.mp3");
         } else {
-          audio.pause();
-          audio.currentTime = 0; // reset (optional)
+          stopTrack?.();
         }
       },
-      { threshold: 0.6 } // 60% visible
+      {
+        threshold: 0.3,
+      }
     );
 
-    if (section) observer.observe(section);
+    observer.observe(el);
 
-    return () => {
-      if (section) observer.unobserve(section);
-    };
-  }, []);
+    return () => observer.disconnect();
+  }, [playTrack, stopTrack]);
 
   return (
     <section
       ref={sectionRef}
-      className="h-screen w-full bg-black flex items-center justify-center text-white text-center"
+      className="h-screen w-full bg-black flex items-center justify-center text-white"
     >
-      <h1 className="text-4xl md:text-6xl font-fantomen">
-        Chapter 1: Stranger in the Land of Shadow
+      <h1 className="text-5xl md:text-7xl font-fantomen text-center">
+        Chapter 1: Aari Aari
       </h1>
-
-      {/* 🔊 Audio */}
-      <audio ref={audioRef} src="/music/1.mp3" preload="auto" />
     </section>
   );
 }
+
+

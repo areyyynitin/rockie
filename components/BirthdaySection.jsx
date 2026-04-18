@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 const VIDEO_URL =
   "/drunk/rocky.mp4"; // placeholder — swap with your video
 
-export default function RockyBirthday() {
+export default function BirthdaySection() {
   const containerRef = useRef(null);
   const headlineRef = useRef(null);
   const subRef = useRef(null);
