@@ -44,14 +44,22 @@ export default function ChapterOne({ playTrack, stopTrack }) {
   }, [playTrack, stopTrack]);
 
   return (
-    <section
-      ref={sectionRef}
-      className="h-screen w-full bg-black flex items-center justify-center text-white"
-    >
-      <h1 className="text-5xl md:text-7xl font-fantomen text-center">
-        Chapter 1: Aari Aari
-      </h1>
-    </section>
+   <section
+  ref={sectionRef}
+  className="h-screen w-full bg-black flex items-center justify-center font-fantomen text-white px-4"
+>
+  <div className="text-center">
+
+    <p className="tracking-widest text-white/60 mb-2">
+      Chapter 1
+    </p>
+
+    <h1 className="text-4xl sm:text-5xl md:text-6xl font-medium">
+      Aari Aari
+    </h1>
+
+  </div>
+</section>
   );
 }
 

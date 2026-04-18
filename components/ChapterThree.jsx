@@ -31,14 +31,21 @@ export default function ChapterThree({ playTrack , stopTrack }) {
 
 
   return (
-    <section
-      ref={sectionRef}
-      className="h-screen w-full bg-black flex items-center justify-center text-white text-center"
-    >
-      <h1 className="text-4xl md:text-6xl font-fantomen uppercase">
-        Chapter 3:The Bastard king of nerul
-      </h1>
+  <section
+  ref={sectionRef}
+  className="h-screen w-full bg-black flex items-center justify-center font-fantomen text-white px-4"
+>
+  <div className="text-center">
 
-    </section>
+    <p className="tracking-widest text-white/60 mb-2">
+      Chapter 3
+    </p>
+
+    <h1 className="text-4xl sm:text-5xl md:text-6xl font-medium">
+     Bastard king of nerul
+    </h1>
+
+  </div>
+</section>
   );
 }

@@ -31,14 +31,21 @@ export default function ChapterTwo({ playTrack , stopTrack }) {
 
 
   return (
-    <section
-      ref={sectionRef}
-      className="h-screen w-full bg-black flex items-center justify-center text-white text-center"
-    >
-      <h1 className="text-4xl md:text-6xl font-fantomen">
-        Chapter 2: Stranger in the land of shadows
-      </h1>
+   <section
+  ref={sectionRef}
+  className="h-screen w-full bg-black flex items-center justify-center font-fantomen text-white px-4"
+>
+  <div className="text-center">
 
-    </section>
+    <p className="tracking-widest text-white/60 mb-2">
+      Chapter 2
+    </p>
+
+    <h1 className="text-4xl sm:text-5xl md:text-6xl font-medium">
+      Stranger in the land of shadows
+    </h1>
+
+  </div>
+</section>
   );
 }

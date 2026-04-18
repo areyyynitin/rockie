@@ -31,14 +31,21 @@ export default function ChapterFive({ playTrack , stopTrack }) {
 
 
   return (
-    <section
-      ref={sectionRef}
-      className="h-screen w-full bg-black flex items-center justify-center text-white text-center"
-    >
-      <h1 className="text-4xl md:text-6xl font-fantomen">
-        Chapter 5: The devil's guardian
-      </h1>
+   <section
+  ref={sectionRef}
+  className="h-screen w-full bg-black flex items-center justify-center font-fantomen text-white px-4"
+>
+  <div className="text-center">
 
-    </section>
+    <p className="tracking-widest text-white/60 mb-2">
+      Chapter 5
+    </p>
+
+    <h1 className="text-4xl sm:text-5xl md:text-6xl font-medium">
+     The devil's guardian
+    </h1>
+
+  </div>
+</section>
   );
 }

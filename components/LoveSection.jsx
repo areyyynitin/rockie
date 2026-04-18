@@ -2,35 +2,38 @@ import InfiniteMenu from "../src/ui/InfiniteMenu";
 
 const items = [
   {
-    image: '/drunk/1.jpg',
-   
+    image: '/rock/1.jpeg',
   },
-   {
-    image: '/drunk/2.jpg',
-   
+    {
+    image: '/rock/2.jpeg',
   },
-   {
-    image: '/drunk/3.jpg',
-   
+    {
+    image: '/rock/3.jpeg',
   },
-   {
-    image: '/drunk/4.jpg',
+    {
+    image: '/rock/4.jpeg',
   },
-   {
-    image: '/drunk/5.jpg',
+    {
+    image: '/rock/5.jpeg',
   },
-   {
-    image: '/drunk/6.jpeg',
+    {
+    image: '/rock/6.jpeg',
   },
-   {
-    image: '/drunk/7.jpeg',
+    {
+    image: '/rock/7.jpeg',
   },
-   {
-    image: '/drunk/8.jpeg',
+    {
+    image: '/rock/8.jpeg',
   },
-   {
-    image: '/drunk/9.jpg',
+    {
+    image: '/rock/9.jpeg',
   },
+    {
+    image: '/rock/10.jpeg',
+  },
+
+ 
+  
 ];
 
 export default function LoveSection() {
