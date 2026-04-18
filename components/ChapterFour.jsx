@@ -33,7 +33,7 @@ export default function ChapterFour({ playTrack , stopTrack}) {
   return (
    <section
   ref={sectionRef}
-  className="h-screen w-full bg-black flex items-center justify-center font-fantomen text-white px-4"
+  className="h-screen w-full bg-red-900 flex items-center justify-center font-fantomen text-white px-4"
 >
   <div className="text-center">
 
