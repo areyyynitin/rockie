@@ -55,7 +55,7 @@ export default function ChapterOne({ playTrack, stopTrack }) {
     </p>
 
     <h1 className="text-4xl sm:text-5xl md:text-6xl font-medium">
-      Aari Aari
+     A burnt memory
     </h1>
 
   </div>
