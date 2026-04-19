@@ -31,6 +31,15 @@ const items = [
     {
     image: '/rock/10.jpeg',
   },
+   {
+    image: '/rock/11.jpeg',
+  },
+  {
+    image: '/rock/12.jpeg',
+  },
+  {
+    image: '/rock/13.jpeg',
+  },
 
  
   
