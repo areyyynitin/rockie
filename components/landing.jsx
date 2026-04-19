@@ -151,7 +151,7 @@ export default function StoryExperience() {
           <WhatRockyLoves />
 
           <ChapterSix playTrack={playTrack} stopTrack={stopTrack} />
-          <BirthdaySection />
+          {/* <BirthdaySection /> */}
 
         </>
       )}
