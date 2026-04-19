@@ -69,7 +69,7 @@ export default function HeroIntro() {
 
           {/* Sub text */}
           <p className="mt-4 text-sm md:text-base text-white/60">
-            Until one day, everything feels a little lighter, a little warmer —
+            Until one day, everything feels a little lighter, a little warmer
             just because they’re there.
           </p>
         </div>

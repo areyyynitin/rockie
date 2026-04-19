@@ -203,34 +203,8 @@ export default function BirthdaySection() {
         </em>
       </h1>
 
-      {/* Subtext */}
-      <p
-        ref={subRef}
-        style={{
-          marginTop: "1rem",
-          fontSize: "0.82rem",
-          letterSpacing: "0.14em",
-          color: "#9e9e8e",
-          textTransform: "uppercase",
-          fontFamily: "'Georgia', serif",
-          opacity: 0,
-        }}
-      >
-        A very good boy's secret ritual
-      </p>
+    
 
-      {/* Bottom ornament */}
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: "0.75rem",
-          marginTop: "2.75rem",
-          opacity: 0.2,
-        }}
-      >
-       
-      </div>
     </div>
   );
 }
